@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bombay — Exotic Indian Cuisine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-logo">Bombay</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#start" data-de="Start" data-en="Home">Start</a></li>
+    <li><a href="#uber" data-de="&Uuml;ber uns" data-en="About">&Uuml;ber uns</a></li>
+    <li><a href="#restaurants" data-de="Restaurants" data-en="Restaurants">Restaurants</a></li>
+    <li><a href="#galerie" data-de="Galerie" data-en="Gallery">Galerie</a></li>
+    <li><a href="#panorama" data-de="360&deg; Tour" data-en="360&deg; Tour">360&deg; Tour</a></li>
+    <li><a href="#kontakt" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+    <li><a href="https://www.bombay-woergl.at/bundles/bezfrontend/upload/manager/555/Bombay%20Restaurant%20menu%20card%202026.pdf" target="_blank" rel="noopener" data-de="Speisekarte" data-en="Menu">Speisekarte</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="active" data-lang="de" onclick="setLang('de')">DE</button>
+    <div class="divider"></div>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+  <button class="mobile-toggle" id="mobileToggle">&#9776;</button>
+</nav>
+
+<section class="hero" id="start">
+  <div class="hero-bg"><video autoplay muted loop playsinline src="assets/hero-video.mp4"></video></div>
+  <div class="hero-orb"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-orb"></div>
+  <div class="hero-content">
+    <p class="hero-label">Exotic Indian Cuisine &middot; Since 1998</p>
+    <img src="https://www.bombay-woergl.at/bundles/bezfrontend/upload/manager/555/logo_w%C3%B6rgl_transparent2.png" alt="Bombay" class="hero-logo">
+    <h1 class="hero-title">Bombay</h1>
+    <p class="hero-sub" data-de="Eine kulinarische Reise nach Nordindien" data-en="A culinary journey to North India">Eine kulinarische Reise nach Nordindien</p>
+    <div class="hero-cta">
+      <a href="#restaurants" class="btn btn-filled" data-de="Restaurants" data-en="Restaurants">Restaurants</a>
+      <a href="#panorama" class="btn" data-de="Virtueller Rundgang" data-en="Virtual Tour">Virtueller Rundgang</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<section class="section about-section" id="uber">
+  <div class="section-inner">
+    <span class="section-label" data-de="Seit 1998" data-en="Since 1998">Seit 1998</span>
+    <h2 class="section-title" data-de="Authentische indische K&uuml;che&lt;br&gt;in Tirol" data-en="Authentic Indian Cuisine&lt;br&gt;in Tyrol">Authentische indische K&uuml;che<br>in Tirol</h2>
+    <p class="section-desc" data-de="Traditionelle Rezepte, frische Zutaten und eine Atmosph&auml;re, die Sie ins Herz Indiens entf&uuml;hrt." data-en="Traditional recipes, fresh ingredients and an atmosphere that takes you to the heart of India.">Traditionelle Rezepte, frische Zutaten und eine Atmosph&auml;re, die Sie ins Herz Indiens entf&uuml;hrt.</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-de="Seit &uuml;ber 25 Jahren servieren wir authentische nordindische K&uuml;che in Tirol. Unsere Gerichte werden nach traditionellen Familienrezepten zubereitet &mdash; mit frischen Gew&uuml;rzen, hausgemachtem Paneer und Zutaten von h&ouml;chster Qualit&auml;t." data-en="For over 25 years we have served authentic North Indian cuisine in Tyrol. Our dishes are prepared according to traditional family recipes &mdash; with fresh spices, homemade paneer and ingredients of the highest quality.">Seit &uuml;ber 25 Jahren servieren wir authentische nordindische K&uuml;che in Tirol. Unsere Gerichte werden nach traditionellen Familienrezepten zubereitet &mdash; mit frischen Gew&uuml;rzen, hausgemachtem Paneer und Zutaten von h&ouml;chster Qualit&auml;t.</p>
+        <p data-de="Vom klassischen Butter Chicken bis zu aromatischen Lamm-Currys: jedes Gericht erz&auml;hlt eine Geschichte. Begleitet von frischem Naan-Brot aus dem Tandoori-Ofen und erfrischenden Mango-Lassis." data-en="From classic Butter Chicken to aromatic Lamb Currys: every dish tells a story. Accompanied by fresh Naan bread from the Tandoori oven and refreshing Mango Lassis.">Vom klassischen Butter Chicken bis zu aromatischen Lamm-Currys: jedes Gericht erz&auml;hlt eine Geschichte. Begleitet von frischem Naan-Brot aus dem Tandoori-Ofen und erfrischenden Mango-Lassis.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-num">25+</div><div class="stat-label" data-de="Jahre" data-en="Years">Jahre</div></div>
+          <div class="stat"><div class="stat-num">2</div><div class="stat-label" data-de="Standorte" data-en="Locations">Standorte</div></div>
+          <div class="stat"><div class="stat-num">50+</div><div class="stat-label" data-de="Gerichte" data-en="Dishes">Gerichte</div></div>
+        </div>
+      </div>
+      <div class="about-img-wrap">
+        <img src="assets/interior-restaurant.png" alt="Interior">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-break">
+  <video autoplay muted loop playsinline src="assets/experience-video.mp4"></video>
+  <div class="video-break-overlay"></div>
+  <div class="video-break-text">
+    <span class="section-label" data-de="Das Erlebnis" data-en="The Experience">Das Erlebnis</span>
+    <h2 class="section-title" data-de="Geschmack, der bleibt" data-en="A taste that lingers">Geschmack, der bleibt</h2>
+  </div>
+</section>
+
+<section class="section locations-section" id="restaurants">
+  <div class="section-inner">
+    <span class="section-label" data-de="Besuchen Sie uns" data-en="Visit us">Besuchen Sie uns</span>
+    <h2 class="section-title" data-de="Unsere Restaurants" data-en="Our Restaurants">Unsere Restaurants</h2>
+    <p class="section-desc" data-de="Zwei Standorte, ein Geschmack. Erleben Sie Bombay in W&ouml;rgl und Kufstein." data-en="Two locations, one taste. Experience Bombay in W&ouml;rgl and Kufstein.">Zwei Standorte, ein Geschmack. Erleben Sie Bombay in W&ouml;rgl und Kufstein.</p>
+    <div class="locations">
+      <div class="location-card">
+        <div class="loc-bg"><img src="assets/restaurant-woergl.png" alt="Bombay Wörgl"></div>
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <img src="https://www.bombay-woergl.at/bundles/bezfrontend/upload/manager/555/logo_w%C3%B6rgl_transparent2.png" alt="Bombay Wörgl" class="loc-logo">
+          <div class="loc-line"></div>
+          <h3>Bombay W&ouml;rgl</h3>
+          <p class="city">W&ouml;rgl, Tirol</p>
+          <p class="addr">Bahnhofstra&szlig;e 6, 6300 W&ouml;rgl</p>
+          <span class="phone">+43 664 2775808</span>
+          <span class="email">br.woergl@gmail.com</span>
+          <a class="btn btn-filled" href="mailto:br.woergl@gmail.com" data-de="Reservieren" data-en="Reserve">Reservieren</a>
+        </div>
+      </div>
+      <div class="location-card">
+        <div class="loc-bg"><img src="assets/restaurant-kufstein.png" alt="Bombay Kufstein"></div>
+        <div class="loc-overlay"></div>
+        <div class="loc-content">
+          <img src="https://www.bombay-woergl.at/bundles/bezfrontend/upload/manager/555/logo_kufsteinl_transparent2.png" alt="Bombay Kufstein" class="loc-logo">
+          <div class="loc-line"></div>
+          <h3>Bombay Kufstein</h3>
+          <p class="city">Kufstein, Tirol</p>
+          <p class="addr">Innstra&szlig;e 15, 6330 Kufstein</p>
+          <span class="phone">+43 664 2775808</span>
+          <span class="email">br.kufstein@gmail.com</span>
+          <a class="btn btn-filled" href="mailto:br.kufstein@gmail.com" data-de="Reservieren" data-en="Reserve">Reservieren</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery-section" id="galerie">
+  <div class="section-inner">
+    <span class="section-label" data-de="Impressionen" data-en="Impressions">Impressionen</span>
+    <h2 class="section-title" data-de="Galerie" data-en="Gallery">Galerie</h2>
+    <p class="section-desc" data-de="Einblicke in unsere Welt &mdash; Ambiente, Gerichte und Gastfreundschaft." data-en="Insights into our world &mdash; ambiance, dishes and hospitality.">Einblicke in unsere Welt &mdash; Ambiente, Gerichte und Gastfreundschaft.</p>
+    <div class="gallery">
+      <div class="gallery-item"><img src="assets/interior-restaurant.png" alt="Interior"></div>
+      <div class="gallery-item"><img src="assets/food-dishes.png" alt="Food"></div>
+      <div class="gallery-item"><img src="assets/restaurant-woergl.png" alt="Restaurant"></div>
+      <div class="gallery-item"><img src="assets/restaurant-kufstein.png" alt="Details"></div>
+      <div class="gallery-item"><img src="assets/service.png" alt="Service"></div>
+      <div class="gallery-item"><img src="assets/heritage.png" alt="Since 1998"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pano-section" id="panorama">
+  <div class="section-inner">
+    <span class="section-label" data-de="Virtueller Rundgang" data-en="Virtual Tour">Virtueller Rundgang</span>
+    <h2 class="section-title" style="text-align:center;margin-bottom:0.5rem;" data-de="360&deg; Erlebnis" data-en="360&deg; Experience">360&deg; Erlebnis</h2>
+    <p class="section-desc" style="text-align:center;margin:0 auto 2.5rem;" data-de="Schau di um bei uns! Spazieren Sie virtuell durch unser Restaurant in W&ouml;rgl." data-en="Take a look around! Virtually stroll through our restaurant in W&ouml;rgl.">Schau di um bei uns! Spazieren Sie virtuell durch unser Restaurant in W&ouml;rgl.</p>
+    <div class="pano-wrap">
+      <iframe src="https://schau-di-um.at/woergl/partner/bombay/" title="360 Panorama" allow="accelerometer; gyroscope"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="section hours-section" id="hours">
+  <div class="section-inner">
+    <span class="section-label" data-de="&Ouml;ffnungszeiten" data-en="Hours">&Ouml;ffnungszeiten</span>
+    <h2 class="section-title" data-de="Wann wir f&uuml;r Sie da sind" data-en="When we are here for you">Wann wir f&uuml;r Sie da sind</h2>
+    <p class="section-desc" data-de="Reservierung empfohlen. Take-Away und Lieferung auf Vorbestellung." data-en="Reservation recommended. Take-away and delivery on pre-order.">Reservierung empfohlen. Take-Away und Lieferung auf Vorbestellung.</p>
+    <div class="hours-grid">
+      <div class="hours-card">
+        <h3>W&ouml;rgl</h3>
+        <div class="hours-row"><span data-de="Montag &ndash; Samstag" data-en="Monday &ndash; Saturday">Montag &ndash; Samstag</span><span>11:30 &ndash; 14:00 &amp; 17:00 &ndash; 21:30</span></div>
+        <div class="hours-row"><span data-de="Sonntag &amp; Feiertag" data-en="Sunday &amp; Holidays">Sonntag &amp; Feiertag</span><span>17:00 &ndash; 21:00</span></div>
+        <div class="hours-row"><span data-de="Take-Away" data-en="Take-Away">Take-Away</span><span data-de="Immer m&ouml;glich" data-en="Always available">Immer m&ouml;glich</span></div>
+        <div class="hours-row"><span data-de="Lieferung" data-en="Delivery">Lieferung</span><span data-de="Auf Vorbestellung" data-en="On pre-order">Auf Vorbestellung</span></div>
+      </div>
+      <div class="hours-card">
+        <h3>Kufstein</h3>
+        <div class="hours-row"><span data-de="Montag &ndash; Samstag" data-en="Monday &ndash; Saturday">Montag &ndash; Samstag</span><span>11:30 &ndash; 14:00 &amp; 17:00 &ndash; 21:30</span></div>
+        <div class="hours-row"><span data-de="Sonntag &amp; Feiertag" data-en="Sunday &amp; Holidays">Sonntag &amp; Feiertag</span><span>17:00 &ndash; 21:00</span></div>
+        <div class="hours-row"><span data-de="Take-Away" data-en="Take-Away">Take-Away</span><span data-de="Immer m&ouml;glich" data-en="Always available">Immer m&ouml;glich</span></div>
+        <div class="hours-row"><span data-de="Lieferung" data-en="Delivery">Lieferung</span><span data-de="Auf Vorbestellung" data-en="On pre-order">Auf Vorbestellung</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-break">
+  <video autoplay muted loop playsinline src="assets/cooking-video.mp4"></video>
+  <div class="video-break-overlay"></div>
+  <div class="video-break-text">
+    <span class="section-label" data-de="Frisch zubereitet" data-en="Freshly prepared">Frisch zubereitet</span>
+    <h2 class="section-title" data-de="Authentisch &amp; Leidenschaftlich" data-en="Authentic &amp; Passionate">Authentisch &amp; Leidenschaftlich</h2>
+  </div>
+</section>
+
+<section class="section contact-section" id="kontakt">
+  <div class="contact-wrap">
+    <div class="contact-visual">
+      <img src="assets/service-team.png" alt="Unser Team">
+    </div>
+    <div class="contact-info">
+      <span class="section-label" data-de="Reservierung" data-en="Reservation">Reservierung</span>
+      <h2 class="section-title" data-de="Tisch reservieren" data-en="Reserve a table">Tisch reservieren</h2>
+      <p class="section-desc" data-de="Rufen Sie uns an oder schreiben Sie uns &mdash; wir freuen uns auf Ihren Besuch." data-en="Call us or write to us &mdash; we look forward to your visit.">Rufen Sie uns an oder schreiben Sie uns &mdash; wir freuen uns auf Ihren Besuch.</p>
+      <div class="contact-btns">
+        <a href="tel:+436642775808" class="btn btn-filled">+43 664 2775808</a>
+      </div>
+      <div class="contact-email">
+        <span>br.woergl@gmail.com</span>
+        <button class="copy-btn" onclick="copyEmail(this)" title="Copy">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">Bombay</div>
+    <div class="footer-copy">&copy; 2026 Bombay &mdash; Exotic Indian Cuisine</div>
+    <div class="footer-social"><a href="#">Facebook</a><a href="#">Instagram</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
