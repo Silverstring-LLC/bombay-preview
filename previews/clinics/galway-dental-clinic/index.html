@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Galway Dental Clinic — Modern Dental Care in Galway</title>
+<meta name="description" content="Galway Dental Clinic — gentle, modern dental care in Galway. Book your appointment online in under a minute."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10242b; --paper:#f4f8f8; --paper-2:#e7f0f0; --teal:#0e7c7b; --teal-2:#0a605f;
+  --sky:#2a9d97; --gold:#c89b54; --muted:#5c6e72; --line:rgba(16,36,43,.12); --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.08}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:14px 26px;border-radius:999px;font-weight:500;font-size:15px;transition:.2s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-2);transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s ease,box-shadow .35s ease}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:'Fraunces',serif;font-size:25px;font-weight:600;letter-spacing:.01em;color:#fdfffe;transition:color .35s}
+.brand span{color:#7fe0d6}
+.nav-links{display:flex;gap:32px;align-items:center;font-size:14px;color:rgba(253,255,254,.85)}
+.nav-links a:not(.btn):hover{color:#fff}
+.nav .btn-primary{padding:10px 22px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.55);color:#fff;backdrop-filter:blur(4px)}
+.nav .btn-primary:hover{background:#fff;color:var(--teal-2);border-color:#fff}
+.nav.scrolled{background:rgba(244,248,248,.94);backdrop-filter:blur(12px);box-shadow:0 6px 24px -18px rgba(0,0,0,.4)}
+.nav.scrolled .brand{color:var(--ink)}
+.nav.scrolled .nav-links{color:var(--muted)}
+.nav.scrolled .nav-links a:not(.btn):hover{color:var(--ink)}
+.nav.scrolled .btn-primary{background:var(--teal);border-color:var(--teal);color:#fff}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0a605f 0%,#0e7c7b 45%,#2a9d97 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%,transparent 40%,rgba(7,40,42,.55) 100%)}
+.hero-deco{position:absolute;border-radius:50%;background:rgba(255,255,255,.06);filter:blur(2px)}
+.d1{width:480px;height:480px;top:-160px;right:-120px}
+.d2{width:340px;height:340px;bottom:-140px;left:-100px;background:rgba(127,224,214,.10)}
+.hero-in{position:relative;z-index:2;max-width:760px;padding:120px 28px 80px}
+.hero .eyebrow{color:#9fe9df}
+.hero h1{font-size:clamp(40px,7vw,76px);margin:18px 0 20px;letter-spacing:-.01em}
+.hero p{font-size:clamp(17px,2.2vw,20px);color:rgba(255,255,255,.92);max-width:600px;margin:0 auto 34px;font-weight:300}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.hero .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.trust{margin-top:46px;display:flex;gap:38px;justify-content:center;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.02em}
+.trust b{display:block;font-family:'Fraunces',serif;font-size:26px;color:#fff;font-weight:600}
+
+/* SECTIONS */
+section{padding:96px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 56px}
+.sec-head h2{font-size:clamp(30px,4.5vw,46px);margin:14px 0 16px}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:34px 30px;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(10,96,95,.5)}
+.card .ic{width:50px;height:50px;border-radius:13px;background:var(--paper-2);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
+
+/* BOOK band */
+.band{background:linear-gradient(135deg,#0a605f,#0e7c7b);color:#fff;border-radius:26px;padding:64px 48px;text-align:center;margin:0 auto;max-width:1120px}
+.band h2{font-size:clamp(28px,4vw,42px);margin-bottom:14px}
+.band p{color:rgba(255,255,255,.9);max-width:520px;margin:0 auto 30px;font-weight:300}
+.band .btn-primary{background:#fff;color:var(--teal-2)}
+.band .btn-primary:hover{background:#eafffb}
+
+/* WHY split */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
+.split .media{aspect-ratio:4/3;border-radius:22px;background:linear-gradient(135deg,#bfe6e2,#8fcfca);position:relative;overflow:hidden}
+.split .media::after{content:"🦷";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:120px;opacity:.35}
+.feat{display:flex;gap:16px;margin-bottom:22px}
+.feat .dot{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--paper-2);display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:600}
+.feat h3{font-size:19px;margin-bottom:3px;font-family:'Inter';font-weight:600}
+.feat p{color:var(--muted);font-size:15px}
+
+/* FOOTER */
+footer{background:#0b2329;color:#cfe3e3;padding:64px 0 38px;margin-top:20px}
+.foot-in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+.foot-brand{font-family:'Fraunces',serif;font-size:24px;color:#fff}
+.foot-brand span{color:#7fe0d6}
+.foot-col h4{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#7fe0d6;margin-bottom:14px}
+.foot-col p,.foot-col a{display:block;color:#a9c7c7;font-size:14px;margin-bottom:7px}
+.foot-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:22px;font-size:12px;color:#7c9a9a;text-align:center}
+.preview-tag{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:80;background:rgba(11,35,41,.92);color:#dff;font-size:12px;padding:9px 18px;border-radius:999px;backdrop-filter:blur(6px);border:1px solid rgba(127,224,214,.35);letter-spacing:.02em}
+@media(max-width:860px){.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr;gap:30px}.nav-links a:not(.btn){display:none}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <div class="brand">Galway Dental Clinic<span>.</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#visit">Visit</a>
+      <a href="#book" class="btn btn-primary">Book online</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"><div class="hero-deco d1"></div><div class="hero-deco d2"></div></div>
+  <div class="hero-in">
+    <div class="eyebrow">Galway · Gentle modern dentistry</div>
+    <h1>A healthier smile,<br/>booked in a minute.</h1>
+    <p>Galway Dental Clinic brings calm, modern dental care to Galway — with easy online booking, transparent pricing, and a team that takes the nerves out of the chair.</p>
+    <div class="hero-cta">
+      <a href="#book" class="btn btn-primary">Book an appointment →</a>
+      <a href="tel:+353091531531" class="btn btn-ghost">Call 091 531531</a>
+    </div>
+    <div class="trust">
+      <div><b>Same-week</b>appointments</div>
+      <div><b>0%</b>finance available</div>
+      <div><b>5★</b>patient-rated care</div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Everything your smile needs</h2>
+      <p>From routine check-ups to a full smile makeover — all under one calm, modern roof.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ic">🪥</div><h3>General &amp; preventive</h3><p>Check-ups, hygiene, fillings and gentle care that keeps problems away before they start.</p></div>
+      <div class="card"><div class="ic">✨</div><h3>Cosmetic &amp; whitening</h3><p>Veneers, bonding and professional whitening for a smile you’ll want to show off.</p></div>
+      <div class="card"><div class="ic">🦷</div><h3>Implants &amp; restoration</h3><p>Replace missing teeth with natural-looking implants, crowns and bridges built to last.</p></div>
+      <div class="card"><div class="ic">😬</div><h3>Invisalign &amp; aligners</h3><p>Straighten your teeth discreetly with clear aligners tailored to you.</p></div>
+      <div class="card"><div class="ic">🚑</div><h3>Emergency care</h3><p>In pain today? We keep same-day slots so you’re never left waiting.</p></div>
+      <div class="card"><div class="ic">👶</div><h3>Family &amp; kids</h3><p>Friendly, patient care for every age — making the dentist a place children don’t dread.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="background:var(--paper-2)">
+  <div class="wrap split">
+    <div class="media"></div>
+    <div>
+      <div class="eyebrow">Why Galway Dental Clinic</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);margin:12px 0 28px">Care that actually feels different</h2>
+      <div class="feat"><div class="dot">1</div><div><h3>Book online, anytime</h3><p>No phone tag. Pick a slot from your phone in under a minute, day or night.</p></div></div>
+      <div class="feat"><div class="dot">2</div><div><h3>Honest, upfront pricing</h3><p>Know what things cost before you sit down. No surprises, no pressure.</p></div></div>
+      <div class="feat"><div class="dot">3</div><div><h3>A calm, gentle team</h3><p>Nervous patients are our specialty. We go at your pace, every time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="band">
+      <div class="eyebrow" style="color:#9fe9df">Ready when you are</div>
+      <h2>Book your visit to Galway Dental Clinic</h2>
+      <p>Choose a time that suits you and we’ll take care of the rest. New patients always welcome.</p>
+      <a href="#" class="btn btn-primary">Book online now →</a>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:40px">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow">Visit us</div>
+      <h2 style="font-size:clamp(26px,4vw,38px);margin:12px 0 22px">Find us in Galway</h2>
+      <p style="color:var(--muted);margin-bottom:18px">We’re easy to reach and easy to park near. Pop in, or book ahead and skip the wait.</p>
+      <p style="margin-bottom:8px"><b>Phone</b> · 091 531531</p>
+      <p style="margin-bottom:8px"><b>Hours</b> · Mon–Fri 8:30–17:30 · Sat by appointment</p>
+      <a href="#book" class="btn btn-primary" style="margin-top:18px">Book an appointment →</a>
+    </div>
+    <div class="media" style="background:linear-gradient(135deg,#cfe9e5,#9bd4ce)"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="foot-brand">Galway Dental Clinic<span>.</span></div>
+        <p style="color:#a9c7c7;margin-top:12px;max-width:300px">Gentle, modern dental care in Galway.</p>
+      </div>
+      <div class="foot-col"><h4>Care</h4><a href="#services">General dentistry</a><a href="#services">Cosmetic &amp; whitening</a><a href="#services">Implants</a><a href="#services">Invisalign</a></div>
+      <div class="foot-col"><h4>Practice</h4><a href="#why">Why us</a><a href="#visit">Visit</a><a href="#book">Book online</a></div>
+      <div class="foot-col"><h4>Contact</h4><p>091 531531</p><p>Galway</p></div>
+    </div>
+    <div class="foot-bot">© Galway Dental Clinic, Galway. &nbsp;·&nbsp; Website concept designed by Silverstring.</div>
+  </div>
+</footer>
+
+<div class="preview-tag">✦ Free design preview prepared for Galway Dental Clinic by Silverstring</div>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>40)});
+</script>
+</body>
+</html>
